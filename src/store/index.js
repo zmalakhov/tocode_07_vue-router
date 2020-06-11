@@ -8,13 +8,13 @@ export default new Vuex.Store({
         message: 'hello vuex'
     },
     mutations: {
-        setMessage (state) {
-            state.message = 'hello again'
+        setMessage (state, message) {
+            state.message = message
         }
     },
     actions: {
-        setMessage ({commit}){
-            commit('setMessage')
+        setMessage ({commit}, payload){
+            commit('setMessage', payload)
         }
     },
     getters: {
